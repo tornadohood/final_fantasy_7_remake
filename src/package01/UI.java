@@ -1,6 +1,7 @@
 package package01;
 
 import java.awt.Color;
+import java.awt.Font;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -13,17 +14,40 @@ public class UI {
 	JPanel titleNamePanel, startButtonPanel;
 	JLabel titleNameLabel;
 	JButton startButton;
+	Font titleFont = new Font("Times New Roman", Font.PLAIN, 90);
+	Font normalFont = new Font("Times New Roman", Font.PLAIN, 26);
 
 	public void createUI(){
 		
-		//WINDOW
-		
+		//WINDOW		
 		window = new JFrame();
 		window.setSize(800, 600);
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		window.getContentPane().setBackground(Color.black);
 		window.setLayout(null);
 		window.setVisible(true);
+		
+		//TITLE SCREEN
+		titleNamePanel = new JPanel();
+		titleNamePanel.setBounds(100, 100, 600, 500);
+		titleNamePanel.setBackground(Color.black);
+		titleNameLabel = new JLabel("ADVENTURE");
+		titleNameLabel.setForeground(Color.white);
+		titleNameLabel.setFont(titleFont);
+		titleNamePanel.add(titleNameLabel);
+		
+		startButtonPanel = new JPanel();
+		startButtonPanel.setBounds(300, 400, 200, 100);
+		startButtonPanel.setBackground(Color.black);
+		startButton = new JButton("START");
+		startButton.setBackground(Color.black);
+		startButton.setForeground(Color.white);
+		startButton.setFont(normalFont);
+		startButton.setFocusPainted(false);
+		startButtonPanel.add(startButton);
+		
+		window.add(titleNamePanel);
+		window.add(startButtonPanel);
 		
 	}
 }
