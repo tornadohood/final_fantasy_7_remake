@@ -22,7 +22,7 @@ public class UI {
 	JTextArea mainTextArea;
 	Font titleFont = new Font("Times New Roman", Font.PLAIN, 90);
 	Font normalFont = new Font("Times New Roman", Font.PLAIN, 26);
-	
+	String clickSound;
 	
 	public void createUI(ChoiceHandler cHandler){
 		
@@ -54,6 +54,7 @@ public class UI {
 		startButton.addActionListener(cHandler);
 		startButton.setActionCommand("start");
 		startButtonPanel.add(startButton);
+				
 		
 		window.add(titleNamePanel);
 		window.add(startButtonPanel);

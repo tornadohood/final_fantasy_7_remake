@@ -143,7 +143,7 @@ public class Story {
 			
 			int i = new java.util.Random().nextInt(100)+1;
 			
-			if(i<90) {
+			if(i>90) {
 				monster = new Monster_Goblin();
 			}
 			else {
