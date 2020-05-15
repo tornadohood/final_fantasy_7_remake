@@ -45,11 +45,14 @@ public class UI {
 		startButtonPanel = new JPanel();
 		startButtonPanel.setBounds(300, 400, 200, 100);
 		startButtonPanel.setBackground(Color.black);
+		
 		startButton = new JButton("START");
 		startButton.setBackground(Color.black);
 		startButton.setForeground(Color.black);
 		startButton.setFont(normalFont);
 		startButton.setFocusPainted(false);
+		startButton.addActionListener(cHandler);
+		startButton.setActionCommand("start");
 		startButtonPanel.add(startButton);
 		
 		window.add(titleNamePanel);
@@ -80,6 +83,7 @@ public class UI {
 		choice1.setForeground(Color.black);
 		choice1.setFont(normalFont);
 		choice1.setFocusPainted(false);
+		choice1.addActionListener(cHandler);
 		choice1.setActionCommand("c1");
 		choiceButtonPanel.add(choice1);
 		
@@ -88,6 +92,7 @@ public class UI {
 		choice2.setForeground(Color.black);
 		choice2.setFont(normalFont);
 		choice2.setFocusPainted(false);
+		choice2.addActionListener(cHandler);
 		choice2.setActionCommand("c2");
 		choiceButtonPanel.add(choice2);
 		
@@ -96,6 +101,7 @@ public class UI {
 		choice3.setForeground(Color.black);
 		choice3.setFont(normalFont);
 		choice3.setFocusPainted(false);
+		choice3.addActionListener(cHandler);
 		choice3.setActionCommand("c3");
 		choiceButtonPanel.add(choice3);
 		
@@ -104,6 +110,7 @@ public class UI {
 		choice4.setForeground(Color.black);
 		choice4.setFont(normalFont);
 		choice4.setFocusPainted(false);
+		choice4.addActionListener(cHandler);
 		choice4.setActionCommand("c4");
 		choiceButtonPanel.add(choice4);
 		
