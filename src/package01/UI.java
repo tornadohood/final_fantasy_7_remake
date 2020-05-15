@@ -37,7 +37,7 @@ public class UI {
 		titleNamePanel = new JPanel();
 		titleNamePanel.setBounds(100, 100, 600, 500);
 		titleNamePanel.setBackground(Color.black);
-		titleNameLabel = new JLabel("ADVENTURE");
+		titleNameLabel = new JLabel("最終幻想VII");
 		titleNameLabel.setForeground(Color.white);
 		titleNameLabel.setFont(titleFont);
 		titleNamePanel.add(titleNameLabel);
