@@ -1,6 +1,7 @@
 package package01;
 
 import package02.Weapon_Knife;
+import package02.Weapon_LongSword;
 
 public class Story {
 	
@@ -31,6 +32,9 @@ public class Story {
 			case "talkGuard": talkGuard(); break;
 			case "attackGuard": attackGuard(); break;
 			case "crossRoad": crossRoad(); break;
+			case "north": north(); break;
+			case "east" : east(); break;
+			case "west" : west(); break;
 			}
 		}
 		
@@ -79,7 +83,48 @@ public class Story {
 			ui.choice3.setText("Go south");
 			ui.choice4.setText("Go west");
 			
-			game.nextPosition1 = "townGate";
+			game.nextPosition1 = "north";
+			game.nextPosition2 = "east";
+			game.nextPosition3 = "townGate";
+			game.nextPosition4 = "west";
+		}
+		public void north() {
+			ui.mainTextArea.setText("There is a river.\nYou drink the water and rest at the reiverside.\n\n(Your HP is recoverd by 2)");
+			player.hp = player.hp+2;
+			ui.choice1.setText("Go south");
+			ui.choice2.setText("");
+			ui.choice3.setText("");
+			ui.choice4.setText("");
+			
+			game.nextPosition1 = "crossRoad";
+			game.nextPosition2 = "";
+			game.nextPosition3 = "";
+			game.nextPosition4 = "";
+		}
+		public void east() {
+			ui.mainTextArea.setText("You walked into a forest and found a Long Sword!\n\n(You obtained a Long Sword)");
+			
+			player.currentWeapon = new Weapon_LongSword();
+			ui.weaponLabelName.setText(player.currentWeapon.name);
+			
+			ui.choice1.setText("Go south");
+			ui.choice2.setText("");
+			ui.choice3.setText("");
+			ui.choice4.setText("");
+			
+			game.nextPosition1 = "crossRoad";
+			game.nextPosition2 = "";
+			game.nextPosition3 = "";
+			game.nextPosition4 = "";
+		}
+		public void west() {
+			ui.mainTextArea.setText(")");
+			ui.choice1.setText("Go south");
+			ui.choice2.setText("");
+			ui.choice3.setText("");
+			ui.choice4.setText("");
+			
+			game.nextPosition1 = "crossRoad";
 			game.nextPosition2 = "";
 			game.nextPosition3 = "";
 			game.nextPosition4 = "";
