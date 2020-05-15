@@ -3,10 +3,13 @@ package package01;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.GridLayout;
+import java.io.InputStream;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
@@ -16,13 +19,14 @@ import package01.Game.ChoiceHandler;
 public class UI {
 	
 	JFrame window;
-	JPanel titleNamePanel, startButtonPanel, mainTextPanel, choiceButtonPanel, playerPanel;
-	JLabel titleNameLabel, hpLabel, hpLabelNumber, weaponLabel, weaponLabelName;
+	JPanel titleNamePanel, startButtonPanel, mainTextPanel, choiceButtonPanel, playerPanel, imagePanel;
+	JLabel titleNameLabel, hpLabel, hpLabelNumber, weaponLabel, weaponLabelName, imageLabel;
 	JButton startButton, choice1, choice2, choice3, choice4;
 	JTextArea mainTextArea;
 	Font titleFont = new Font("Times New Roman", Font.PLAIN, 90);
 	Font normalFont = new Font("Times New Roman", Font.PLAIN, 26);
 	String clickSound;
+	ImageIcon image;
 	
 	public void createUI(ChoiceHandler cHandler){
 		
@@ -35,7 +39,7 @@ public class UI {
 		
 		//TITLE SCREEN
 		titleNamePanel = new JPanel();
-		titleNamePanel.setBounds(100, 100, 600, 500);
+		titleNamePanel.setBounds(40, 40, 600, 500);
 		titleNamePanel.setBackground(Color.black);
 		titleNameLabel = new JLabel("最終幻想VII");
 		titleNameLabel.setForeground(Color.white);
@@ -61,12 +65,12 @@ public class UI {
 		
 		//GAME SCREEN
 		mainTextPanel = new JPanel();
-		mainTextPanel.setBounds(100, 100, 600, 250);
+		mainTextPanel.setBounds(50, 350, 430, 250);
 		mainTextPanel.setBackground(Color.black);
 		window.add(mainTextPanel);
 		
 		mainTextArea = new JTextArea("This is the main text area.");
-		mainTextArea.setBounds(100, 100, 600, 250);
+		mainTextArea.setBounds(50, 350, 430, 250);
 		mainTextArea.setBackground(Color.black);
 		mainTextArea.setForeground(Color.white);
 		mainTextArea.setFont(normalFont);
@@ -74,7 +78,7 @@ public class UI {
 		mainTextPanel.add(mainTextArea);
 		
 		choiceButtonPanel = new JPanel();
-		choiceButtonPanel.setBounds(250, 350, 300, 150);
+		choiceButtonPanel.setBounds(500, 350, 250, 150);
 		choiceButtonPanel.setBackground(Color.black);
 		choiceButtonPanel.setLayout(new GridLayout(4,1));
 		window.add(choiceButtonPanel);
@@ -116,9 +120,9 @@ public class UI {
 		choiceButtonPanel.add(choice4);
 		
 		playerPanel = new JPanel();
-		playerPanel.setBounds(100, 15, 600, 50);
+		playerPanel.setBounds(500, 100, 270, 50);
 		playerPanel.setBackground(Color.black);
-		playerPanel.setLayout(new GridLayout(1,4));
+		playerPanel.setLayout(new GridLayout(2,2));
 		window.add(playerPanel);
 		hpLabel = new JLabel("生命值:");
 		hpLabel.setFont(normalFont);
@@ -135,7 +139,21 @@ public class UI {
 		weaponLabelName = new JLabel();
 		weaponLabelName.setFont(normalFont);
 		weaponLabelName.setForeground(Color.white);
-		playerPanel.add(weaponLabelName);	
+		playerPanel.add(weaponLabelName);
+		
+		imagePanel = new JPanel();
+		imagePanel.setBounds(50, 50, 400, 250);
+		imagePanel.setBackground(Color.black);
+		
+		imageLabel = new JLabel();
+		
+		image = new ImageIcon(".//res//towngate2.jpg");
+		
+		imageLabel.setIcon(image);
+		imagePanel.add(imageLabel);
+		
+		
+		window.add(imagePanel);
 		
 		
 		window.setVisible(true);

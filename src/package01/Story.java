@@ -1,10 +1,12 @@
 package package01;
 
 import package02.Monster_Gandalf;
+
 import package02.Monster_Goblin;
 import package02.SuperMonster;
 import package02.Weapon_Knife;
 import package02.Weapon_LongSword;
+
 
 public class Story {
 	
@@ -99,6 +101,7 @@ public class Story {
 			game.nextPosition4 = "";
 		}
 		public void crossRoad() {
+			
 			ui.mainTextArea.setText("You are at a crossroad.\nIf you go south, you will go back to the town.");
 			ui.choice1.setText("Go north");
 			ui.choice2.setText("Go east");
