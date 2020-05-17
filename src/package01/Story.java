@@ -1,5 +1,6 @@
 package package01;
 
+import package02.Armor_HeavyArmor;
 import package02.Monster_Gandalf;
 
 import package02.Monster_Goblin;
@@ -31,6 +32,8 @@ public class Story {
 			ui.hpLabelNumber.setText(""+ player.hp);
 			
 			player.currentWeapon = new Weapon_Knife();
+			player.currentArmor = new Armor_HeavyArmor();
+			ui.armorLabelName.setText(player.currentArmor.name);
 			ui.weaponLabelName.setText(player.currentWeapon.name);
 			
 			silverRing = 0;
