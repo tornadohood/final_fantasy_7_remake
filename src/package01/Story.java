@@ -71,9 +71,9 @@ public class Story {
 			
 			if(silverRing==0) {
 				
-			ui.mainTextArea.setText("Guard: Hello stranger. I have never seen your face. \nI'm sorry but we cannot let a stranger enter our town.");
-			ui.choice1.setText("");
-			ui.choice2.setText(">");
+			ui.mainTextArea.setText("Guard: Hello stranger.I have never seen your face. \nI'm sorry but we cannot let a stranger enter our town.");
+			ui.choice1.setText(">");
+			ui.choice2.setText("");
 			ui.choice3.setText("");
 			ui.choice4.setText("");
 			

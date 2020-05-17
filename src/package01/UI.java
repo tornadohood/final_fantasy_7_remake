@@ -39,7 +39,7 @@ public class UI {
 		
 		//TITLE SCREEN
 		titleNamePanel = new JPanel();
-		titleNamePanel.setBounds(40, 40, 600, 500);
+		titleNamePanel.setBounds(100, 100, 600, 500);
 		titleNamePanel.setBackground(Color.black);
 		titleNameLabel = new JLabel("最終幻想VII");
 		titleNameLabel.setForeground(Color.white);
@@ -58,8 +58,7 @@ public class UI {
 		startButton.addActionListener(cHandler);
 		startButton.setActionCommand("start");
 		startButtonPanel.add(startButton);
-				
-		
+					
 		window.add(titleNamePanel);
 		window.add(startButtonPanel);
 		
