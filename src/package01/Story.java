@@ -33,7 +33,12 @@ public class Story {
 		public void defaultSetup() {
 			
 			player.hp = 10;
+			player.attack = 20;
+			player.defense = 30;
 			ui.hpLabelNumber.setText(""+ player.hp);
+			ui.attackLabelNumber.setText(""+player.attack);
+			ui.defenseLabelNumber.setText(""+player.defense);
+			
 			
 			player.currentWeapon = new Weapon_Knife();
 			player.currentArmor = new Armor_HeavyArmor();

@@ -21,6 +21,7 @@ public class VisibilityManager {
 		ui.choiceButtonPanel.setVisible(false);
 		ui.playerPanel.setVisible(false);
 		ui.imagePanel.setVisible(false);
+		ui.hpPanel.setVisible(false);
 	}
 	public void titleToTown() {
 		
@@ -33,7 +34,7 @@ public class VisibilityManager {
 		ui.choiceButtonPanel.setVisible(true);
 		ui.playerPanel.setVisible(true);
 		ui.imagePanel.setVisible(true);
-		
-		
+		ui.hpPanel.setVisible(true);
+			
 	}
 }

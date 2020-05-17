@@ -19,8 +19,8 @@ import package01.Game.ChoiceHandler;
 public class UI {
 	
 	JFrame window;
-	JPanel titleNamePanel, startButtonPanel, mainTextPanel, choiceButtonPanel, playerPanel, imagePanel;
-	JLabel titleNameLabel, hpLabel, hpLabelNumber, weaponLabel, weaponLabelName, imageLabel,magicLabel,magicLabelName,armorLabel,armorLabelName,accLabel,accLabelName,rideLabel,rideLabelName,stoneLabel,stoneLabelName;
+	JPanel titleNamePanel, startButtonPanel, mainTextPanel, choiceButtonPanel, playerPanel, imagePanel,hpPanel;
+	JLabel titleNameLabel, hpLabel, hpLabelNumber, defenseLabel,defenseLabelNumber,attackLabel,attackLabelNumber,weaponLabel,weaponLabelName,imageLabel,magicLabel,magicLabelName,armorLabel,armorLabelName,accLabel,accLabelName,rideLabel,rideLabelName,stoneLabel,stoneLabelName;
 	JButton startButton, choice1, choice2, choice3, choice4;
 	JTextArea mainTextArea;
 	Font titleFont = new Font("Times New Roman", Font.PLAIN, 90);
@@ -118,20 +118,45 @@ public class UI {
 		choice4.setActionCommand("c4");
 		choiceButtonPanel.add(choice4);
 		
-		playerPanel = new JPanel();
-		playerPanel.setBounds(500, 70, 300, 200);
-		playerPanel.setBackground(Color.black);
-		playerPanel.setLayout(new GridLayout(7,7));
-		window.add(playerPanel);
+		hpPanel = new JPanel();
+		hpPanel.setBounds(50, 20, 650, 50);
+		hpPanel.setBackground(Color.black);
+		hpPanel.setLayout(new GridLayout(1,3));
+		window.add(hpPanel);
 		
 		hpLabel = new JLabel("生命值:");
 		hpLabel.setFont(normalFont);
 		hpLabel.setForeground(Color.white);
-		playerPanel.add(hpLabel);
+		hpPanel.add(hpLabel);
 		hpLabelNumber = new JLabel();
 		hpLabelNumber.setFont(normalFont);
 		hpLabelNumber.setForeground(Color.white);
-		playerPanel.add(hpLabelNumber);
+		hpPanel.add(hpLabelNumber);
+		
+		attackLabel = new JLabel("攻擊力:");
+		attackLabel.setFont(normalFont);
+		attackLabel.setForeground(Color.white);
+		hpPanel.add(attackLabel);
+		attackLabelNumber = new JLabel();
+		attackLabelNumber.setFont(normalFont);
+		attackLabelNumber.setForeground(Color.white);
+		hpPanel.add(attackLabelNumber);
+		
+		defenseLabel = new JLabel("防禦力:");
+		defenseLabel.setFont(normalFont);
+		defenseLabel.setForeground(Color.white);
+		hpPanel.add(defenseLabel);
+		defenseLabelNumber = new JLabel();
+		defenseLabelNumber.setFont(normalFont);
+		defenseLabelNumber.setForeground(Color.white);
+		hpPanel.add(defenseLabelNumber);
+		
+		
+		playerPanel = new JPanel();
+		playerPanel.setBounds(500, 100, 300, 200);
+		playerPanel.setBackground(Color.black);
+		playerPanel.setLayout(new GridLayout(7,7));
+		window.add(playerPanel);
 		
 		weaponLabel = new JLabel("武器:");
 		weaponLabel.setFont(normalFont);
@@ -188,7 +213,7 @@ public class UI {
 		playerPanel.add(stoneLabelName);
 		
 		imagePanel = new JPanel();
-		imagePanel.setBounds(50, 50, 400, 250);
+		imagePanel.setBounds(50, 90, 400, 250);
 		imagePanel.setBackground(Color.black);
 		
 		imageLabel = new JLabel();
