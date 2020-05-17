@@ -1,9 +1,13 @@
 package package01;
 
+import package02.Acc_StarPendant;
 import package02.Armor_HeavyArmor;
+import package02.Magic_Fire;
 import package02.Monster_Gandalf;
 
 import package02.Monster_Goblin;
+import package02.Ride_Chocobo;
+import package02.Stone_comet;
 import package02.SuperMonster;
 import package02.Weapon_Knife;
 import package02.Weapon_LongSword;
@@ -33,8 +37,18 @@ public class Story {
 			
 			player.currentWeapon = new Weapon_Knife();
 			player.currentArmor = new Armor_HeavyArmor();
+			player.currentAcc = new Acc_StarPendant();
+			player.currentMagic = new Magic_Fire();
+			player.currentRide = new Ride_Chocobo();
+			player.currentStone = new Stone_comet();
+			
+			
 			ui.armorLabelName.setText(player.currentArmor.name);
 			ui.weaponLabelName.setText(player.currentWeapon.name);
+			ui.accLabelName.setText(player.currentAcc.name);
+			ui.magicLabelName.setText(player.currentMagic.name);
+			ui.rideLabelName.setText(player.currentRide.name);
+			ui.stoneLabelName.setText(player.currentStone.name);
 			
 			silverRing = 0;
 		}
