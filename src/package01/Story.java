@@ -31,7 +31,7 @@ public class Story {
 		}
 		
 		public void defaultSetup() {
-			
+					
 			player.hp = 10;
 			player.attack = 20;
 			player.defense = 30;

@@ -3,30 +3,27 @@ package package01;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.GridLayout;
-import java.io.InputStream;
-
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
-import package01.Game.ChoiceHandler;
 
+import package01.Game.ChoiceHandler;
 
 public class UI {
 	
 	JFrame window;
-	JPanel titleNamePanel, startButtonPanel, mainTextPanel, choiceButtonPanel, playerPanel, imagePanel,hpPanel;
+	JPanel titleNamePanel, startButtonPanel, mainTextPanel, choiceButtonPanel,playerPanel,imagePanel,hpPanel,musicPanel;
 	JLabel titleNameLabel, hpLabel, hpLabelNumber, defenseLabel,defenseLabelNumber,attackLabel,attackLabelNumber,weaponLabel,weaponLabelName,imageLabel,magicLabel,magicLabelName,armorLabel,armorLabelName,accLabel,accLabelName,rideLabel,rideLabelName,stoneLabel,stoneLabelName;
-	JButton startButton, choice1, choice2, choice3, choice4;
+	JButton startButton,musicButton, choice1, choice2, choice3, choice4;
 	JTextArea mainTextArea;
 	Font titleFont = new Font("Times New Roman", Font.PLAIN, 90);
 	Font normalFont = new Font("Times New Roman", Font.PLAIN, 26);
-	String clickSound;
 	ImageIcon image;
+	String travenMusic;
 	
 	public void createUI(ChoiceHandler cHandler){
 		
@@ -41,7 +38,7 @@ public class UI {
 		titleNamePanel = new JPanel();
 		titleNamePanel.setBounds(100, 100, 600, 500);
 		titleNamePanel.setBackground(Color.black);
-		titleNameLabel = new JLabel("最終幻想VII");
+		titleNameLabel = new JLabel("太空戰士VII");
 		titleNameLabel.setForeground(Color.white);
 		titleNameLabel.setFont(titleFont);
 		titleNamePanel.add(titleNameLabel);
@@ -61,7 +58,7 @@ public class UI {
 					
 		window.add(titleNamePanel);
 		window.add(startButtonPanel);
-		
+
 		//GAME SCREEN
 		mainTextPanel = new JPanel();
 		mainTextPanel.setBounds(50, 350, 430, 250);
@@ -76,6 +73,7 @@ public class UI {
 		mainTextArea.setLineWrap(true);
 		mainTextPanel.add(mainTextArea);
 		
+		//CHOICE BUTTON PANEL
 		choiceButtonPanel = new JPanel();
 		choiceButtonPanel.setBounds(500, 350, 250, 150);
 		choiceButtonPanel.setBackground(Color.black);
@@ -118,6 +116,7 @@ public class UI {
 		choice4.setActionCommand("c4");
 		choiceButtonPanel.add(choice4);
 		
+		//PLAYER STATUS PANEL
 		hpPanel = new JPanel();
 		hpPanel.setBounds(50, 20, 650, 50);
 		hpPanel.setBackground(Color.black);
@@ -151,7 +150,7 @@ public class UI {
 		defenseLabelNumber.setForeground(Color.white);
 		hpPanel.add(defenseLabelNumber);
 		
-		
+		//PLAYER INVENTORY PANEL
 		playerPanel = new JPanel();
 		playerPanel.setBounds(500, 100, 300, 200);
 		playerPanel.setBackground(Color.black);
@@ -212,6 +211,9 @@ public class UI {
 		stoneLabelName.setForeground(Color.white);
 		playerPanel.add(stoneLabelName);
 		
+		window.setVisible(true);
+
+		//IMAGE PANEL 
 		imagePanel = new JPanel();
 		imagePanel.setBounds(50, 90, 400, 250);
 		imagePanel.setBackground(Color.black);
@@ -223,10 +225,9 @@ public class UI {
 		imageLabel.setIcon(image);
 		imagePanel.add(imageLabel);
 		
-		
 		window.add(imagePanel);
-		
-		
 		window.setVisible(true);
+		
 	}
+
 }
